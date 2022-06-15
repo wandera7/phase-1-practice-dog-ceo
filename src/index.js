@@ -10,12 +10,13 @@ function fetchImages(){
 fetchImages()
 function displayImages(array){
     array.forEach((url)=> {
-        const imageContainer=document.querySelector('#dog-image-container');
+        const imageContainer=document.createElement('div')
         imageContainer.innerHTML=`
         <div id="dog-image-container">
-         <img src=${url} alt='dogimage'/>
-         </div>        
+        <img src=${url} alt='dogimage'/>
+        </div>        
         `
+        document.querySelector('#dog-image-container').appendChild(imageContainer);
     })
 }
 
